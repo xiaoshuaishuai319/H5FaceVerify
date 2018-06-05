@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>mock server配置</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<label><input type="radio" name="proxyType" value="0">本机mock</label>
+<label><input type="radio" name="proxyType" value="1">测试服务器</label>
+<button id="submit" type="button">修改</button>
+<script>
+    const submitBtn = $('#submit');
+
+    submitBtn.on('click', () => {
+        $.post(
+            '/option/proxy',
+            {
+                proxyType: $('[name="proxyType"]:checked').val()
+            },
+            {
+                dataType: 'json'
+            }
+        ).then(data => {
+            if (data.status === 0) {
+                alert('修改成功');
+            }
+        });
+    });
+</script>
+</body>
+</html>

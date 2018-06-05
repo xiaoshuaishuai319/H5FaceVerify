@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-cmn-Hans-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>百度人脸验证</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{#compare env '===' 'rd'}}
+    <link rel="stylesheet" href="/faceliveness/dist/{{version}}/css/{{device}}/main.css">
+    {{/compare}}
+    {{#compare env '===' 'online'}}
+    <link rel="stylesheet" href="//aip.bdstatic.com/faceliveness/dist/{{version}}/css/{{device}}/main.css">
+    {{/compare}}
+</head>
+<body>
+<div id="app"></div>
+{{#compare env '===' 'dev'}}
+<script src="/dist/js/vendor.js"></script>
+<script src="/dist/js/{{device}}/main.js"></script>
+{{/compare}}
+{{#compare env '===' 'rd'}}
+<script src="/faceliveness/dist/{{version}}/js/vendor.js"></script>
+<script src="/faceliveness/dist/{{version}}/js/{{device}}/main.js"></script>
+{{/compare}}
+{{#compare env '===' 'online'}}
+<script src="//aip.bdstatic.com/faceliveness/dist/{{version}}/js/vendor.js"></script>
+<script src="//aip.bdstatic.com/faceliveness/dist/{{version}}/js/{{device}}/main.js"></script>
+{{/compare}}
+</body>
+</html>
