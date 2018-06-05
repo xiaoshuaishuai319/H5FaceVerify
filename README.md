@@ -2,6 +2,8 @@
 
 ### 在线体验地址
 
+Online Demo Url
+
 - http://123.207.12.111:8013/pc pc版的
 
 - http://123.207.12.111:8013/mobile 移动版
@@ -13,6 +15,13 @@ H5视频活体检测产品，是由两个接口组合而成，主要用于在H5�
 
 - 语音校验码：为防止用户提交非当前操作的视频，在录制视频时，随机分配一个数字，用户需要读出这个数字，声音存于视频当中，并在后续识别时校验，以判断是否为此次会话。
 - 视频多帧活体检测：录制并上传的视频，会在云端进行随机抽帧分析，并得出最终的活体检测分数。
+
+H5 video live detection product is composed of two interfaces, which is mainly used in the H5 scene to record and upload a video for the detection of the living body. Compared to the two ways that APP has action check + silent picture living and silent picture living, the H5 video live scheme is more flexible than the APP scheme, and is more secure than the single picture living style. The main functions are as follows:
+
+
+Speech check code: in order to prevent the user from submitting a non current operation video, a number is randomly assigned when the video is recorded. The user needs to read the number, the sound is stored in the video, and is checked at the subsequent recognition to determine whether it is the session.
+
+Video multi frame live detection: video recorded and uploaded will be randomly selected for frame analysis in the cloud, and the final living detection score is obtained
 
 #### 软件架构
 
