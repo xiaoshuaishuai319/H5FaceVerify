@@ -4,9 +4,9 @@
 
 Online Demo Url
 
-- http://123.207.12.111:8013/pc pc版的
+- xs.kundadahh.club/pc pc版的
 
-- http://123.207.12.111:8013/mobile 移动版
+- xs.kundadahh.club/mobile 移动版
 
 #### 项目介绍
 H5视频活体检测
